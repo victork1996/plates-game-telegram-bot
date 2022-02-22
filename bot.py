@@ -8,7 +8,7 @@ from commands.check_autotel import handle_check_autotel_command
 
 def configure_log():
     logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-                        level=logging.INFO)
+                        level=logging.DEBUG)
 
 
 def configure_handlers(updater, records_db_path):
@@ -21,6 +21,9 @@ def configure_handlers(updater, records_db_path):
 
 
 def start_bot(records_db_path, bot_token):
+    logging.info("Using bot token: {}".format(bot_token))
+    logging.info("Using cars DB from: {}".format(records_db_path))
+
     configure_log()
     updater = Updater(token=bot_token, use_context=True)
     configure_handlers(updater, records_db_path)

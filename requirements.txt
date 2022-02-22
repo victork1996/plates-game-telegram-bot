@@ -1,0 +1,2 @@
+python_telegram_bot==13.11
+plates-game@git+https://github.com/victork1996/plate-search-game.git@v1.0.0

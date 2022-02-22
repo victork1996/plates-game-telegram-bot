@@ -130,3 +130,7 @@ dmypy.json
 
 # Pycharm
 .idea/
+
+
+# Data related to running the docker image.
+data/*
